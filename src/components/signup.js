@@ -59,9 +59,9 @@ const Signup = () => {
 
     return (
         <Box className="flex flex-col justify-center items-center text-center ">
-            <Box className="flex flex-col space-y-6 flex-wrap align-center h-auto items-center">
-                <Typography variant="h2" className="heading2">
-                    LangNinja
+            <Box component="form" sx={{display:"flex",flexDirection:"column",justifyContent:"center", alignItems:'center'}}>
+                <Typography variant="h5" >
+                    Sign Up
                 </Typography>
                 <TextField
                     type="text"
@@ -69,7 +69,7 @@ const Signup = () => {
                     id="Name"
                     value={name}
                     onChange={e => setName(e.target.value)}
-                    style={{ backgroundColor: "white" }}
+                    style={{ backgroundColor: "white", margin:'4px' }}
                 />
                 <TextField
                     type="text"
@@ -77,6 +77,7 @@ const Signup = () => {
                     id="Email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
+                    style={{ backgroundColor: "white", margin:'4px' }}
                 />
                 <TextField
                     type="password"
@@ -85,27 +86,29 @@ const Signup = () => {
                     value={password}
                     onChange={e => setPasword(e.target.value)}
                     helperText={isPasswordValid ? "" : "choose a strong password"}
+                    style={{ backgroundColor: "white", margin:'4px' }}
                 />
-            </Box>
-            <Box className="my-3" color="primary">
-                <Button
-                    variant="contained"
-                    className="px-10 py-5 m-8"
-                    onClick={() => PostData()}
-                    color="primary"
-                >
-                    signup
+                <Box className="my-3" color="primary">
+                    <Button
+                        variant="contained"
+                        className="px-10 py-5 m-8"
+                        onClick={() => PostData()}
+                        color="primary"
+                    >
+                        signup
+                    </Button>
+                </Box>
+                <Typography variant="h6" gutterBottom className="text-rose-600 underline">
+                    <Link className="" to="/signin">
+                        Already have an account ?
+                    </Link>
+                </Typography>
+                <Button variant="contained" className={`m-8 p-5`} onClick={handleClick} color="primary">
+                    Sign up with Google
                 </Button>
+
+
             </Box>
-            <Typography variant="h6" gutterBottom className="text-rose-600 underline">
-                <Link className="" to="/signin">
-                    Already have an account ?
-                </Link>
-            </Typography>
-            <Button variant="contained" className={`m-8 p-5`} onClick={handleClick} color="primary">
-                Sign up with Google
-            </Button>
-            {/* <p className="self-center m-5"><GoogleLogin onSuccess={responseMessage} onError={errorMessage} /></p> */}
         </Box>
     );
 };

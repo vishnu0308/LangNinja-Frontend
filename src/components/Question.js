@@ -30,7 +30,7 @@ function QuizQuestion({ language, question_id, question, marks, options,option_s
 
   return (
     <div>
-        <Card>
+        <Card sx={{margin:'4px'}}>
         <CardContent>
             {/* Question number and question */}
             <Typography variant="h6" gutterBottom>

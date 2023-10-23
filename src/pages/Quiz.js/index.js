@@ -57,7 +57,7 @@ const QuizPage = () => {
         <div>
             <Grid container spacing={2} direction="column" justifyContent="center" alignItems="center">
                 <Navbar />
-                <Typography variant="h3">
+                <Typography variant="h4" style={{margin:'17px'}}>
                     {language} Quiz
                 </Typography>
                 {
@@ -84,7 +84,7 @@ const QuizPage = () => {
                     <Button
                         variant="contained"
                         color="primary"
-                        style={{ marginTop: '20px' }}
+                        style={{ marginTop: '20px', marginRight:'7px' }}
                         onClick={() => {
                             quitQuiz()
                         }}
@@ -102,6 +102,15 @@ const QuizPage = () => {
                         Submit Quiz
                     </Button>
                 </Box>}
+                {
+                    showAnswers && <Button 
+                        variant="contained"
+                        color="primary"
+                        style={{ marginTop: '20px', marginBottom:'5px' }}
+                        href={"/admin"}>
+                        Go back to your languages page
+                    </Button>
+                }
             </Grid>
 
         </div>

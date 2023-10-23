@@ -3,20 +3,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Signin from "../../components/signin";
 import Title from "../../shared/Title";
+import Navbar from "../../components/Navbar";
 
 export default function SignIn() {
     return (
-        <div className="flex flex-col items-center h-screen align-middle justify-center">
+        <div style={{display:"flex",flexDirection:"column",justifyContent:"center", alignItems:'center'}} >
+            <Navbar />
             <Title title={"Sign In"} />
-            <Grid container className="flex flex-col align-center items-center justify-center">
-                <Grid item xs={12} sm={8} md={6} lg={7}>
-                    <div className="flex justify-center flex-col align-center items-center">
-                        <Signin />
-                        <Link to="/resetpassword" className="text-red-600 underline text-lg">
-                            Reset Password
-                        </Link>
-                    </div>
-                </Grid>
+            <Grid item xs={12} sm={8} md={6} lg={7}>
+                <div style={{display:"flex",flexDirection:"column",justifyContent:"center", alignItems:'center'}} >
+                    <Signin />
+                    <Link to="/resetpassword">
+                        Reset Password
+                    </Link>
+                </div>
             </Grid>
         </div>
     );

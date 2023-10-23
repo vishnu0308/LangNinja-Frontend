@@ -8,6 +8,9 @@ import SignIn from "../pages/SignIn";
 import Success from "../pages/loginSuccess";
 import LanguageInfoPage from "../pages/languageInfo";
 import QuizPage from "../pages/Quiz.js";
+import MyStats from "../pages/MyStats";
+import Leaderboard from "../pages/Leaderboard";
+import Settings from "../pages/Settings";
 
 export const Links = [
     {
@@ -56,6 +59,24 @@ export const Links = [
         name: "QuizPage",
         path: "/quiz",
         element:<QuizPage />,
+        showInNavigation: true,
+    },
+    {
+        name: "MyStats",
+        path: "/stats",
+        element:<MyStats />,
+        showInNavigation: true,
+    },
+    {
+        name: "Leaderboard",
+        path: "/leaderboard",
+        element:<Leaderboard />,
+        showInNavigation: true,
+    },
+    {
+        name: "Settings",
+        path: "/settings",
+        element:<Settings />,
         showInNavigation: true,
     },
     {

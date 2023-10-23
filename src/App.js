@@ -31,12 +31,6 @@ function App() {
             secondary:{
               main:"#EDF5E1"
             },
-            // backgroundlight: {
-            //     default: "#8EE4AF",
-            // },
-            // backgrounddark:{
-            //   default: "#379683"
-            // }
         },
     });
 

@@ -65,20 +65,20 @@ function LanguageGrid({ cardDetails, allLanguages }) {
   }
 
   return (
-    <div>
+    <div style={{display:"flex",flexDirection:"column",justifyContent:"center", alignItems:'center',width:'100%'}}>
       {/* Display message if the list is empty */}
       {cardDetails.length === 0 ? (
         <Typography variant="h6" align="center">
           No languages selected
         </Typography>
       ) : (
-        <Grid container spacing={3}>
-          {cardDetails.map((card, index) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-              <LanguageCard languageName={card.language} level={parseInt(card.level)} />
-            </Grid>
-          ))}
-        </Grid>
+          <Grid container spacing={3} style={{justifyContent:'center'}}>
+            {cardDetails.map((card, index) => (
+              <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
+                <LanguageCard languageName={card.language} level={card.level} />
+              </Grid>
+            ))}
+          </Grid>
       )}
 
     
@@ -88,6 +88,7 @@ function LanguageGrid({ cardDetails, allLanguages }) {
             value={selectedLanguage}
             onChange={handleLanguageChange}
             renderInput={(params) => <TextField {...params} label="Select Language" />}
+            style={{width:'30%'}}
         />
 
         <Button

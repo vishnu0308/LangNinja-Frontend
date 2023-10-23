@@ -53,28 +53,31 @@ const Signin = () => {
             });
     };
     return (
-        <Box className="flex flex-col justify-center text-center p-2 space-y-8">
-            <Box className="flex flex-col space-y-6 flex-wrap items-center">
-                <Typography variant="h4" className="font-semibold text-3xl p-10" fontWeight="bold">
-                    Log in to your LangNinja
+        <Box sx={{display:"flex",flexDirection:"column",justifyContent:"center", alignItems:'center'}}>
+            <Box sx ={{display:"flex",flexDirection:"column",justifyContent:"center", alignItems:'center'}} >
+                <Typography variant="h5" fontWeight="bold" style={{margin:'15px'}}>
+                    Log in to your LangNinja account
                 </Typography>
                 <TextField
                     type="text"
                     label="Email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
+                    style={{'margin':'4px'}}
                 />
                 <TextField
                     type="password"
                     label="Password"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
+                    style={{margin:'4px'}}
                 />
             </Box>
             <Button
                 className="px-10 py-5 m-8 bg-rose-400 w-fit self-center"
                 onClick={() => PostData()}
                 variant="contained"
+                style={{margin:'4px'}}
             >
                 Login
             </Button>
@@ -85,6 +88,7 @@ const Signin = () => {
                 className="bg-white m-5 w-fit p-5 self-center"
                 onClick={handleClick}
                 variant="contained"
+                style={{margin:'4px'}}
             >
                 <span>Sign in with Google</span>
             </Button>

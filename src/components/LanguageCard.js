@@ -8,7 +8,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
 
 const CardStyle = {
-  width: 300, // Set the card width.
+  width: '300px', // Set the card width.
   margin: '10px', // Add margin for spacing.
   display: 'flex',
   flexDirection: 'column',
@@ -39,7 +39,7 @@ function LanguageCard({ languageName, level }) {
         </Typography>
         <div style={StarContainer}>
           {Array.from({ length: 5 }, (_, index) => (
-            <StarIcon key={index} color={index < level ? 'primary' : 'disabled'} />
+            <StarIcon key={index} color={index < parseInt(level) ? 'primary' : 'disabled'} />
           ))}
         </div>
       </CardContent>

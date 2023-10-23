@@ -8,7 +8,10 @@ const Routes = {
     getQuizQuestions:"quiz/get-quiz-questions",
     saveAnswer: "quiz/save-answer",
     submitQuiz: "quiz/submit-quiz",
-    quitQuiz: "quiz/quit-quiz"
+    quitQuiz: "quiz/quit-quiz",
+    getMyStats: "stats/get-my-stats",
+    getLeaderboard:"stats/get-leaderboard",
+    resetProgress:"stats/reset-progress"
 };
 
 export default Routes;

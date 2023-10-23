@@ -35,7 +35,7 @@ function Navbar() {
         {getSession() ? (
           /* If the user is logged in, show these buttons. */
           <div>
-            <Button component={Link} to="/progress" color="inherit">
+            <Button component={Link} to="/admin" color="inherit">
               My progress
             </Button>
             <Button component={Link} to="/stats" color="inherit">
